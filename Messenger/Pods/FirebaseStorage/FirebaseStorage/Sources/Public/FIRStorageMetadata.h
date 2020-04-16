@@ -113,8 +113,15 @@ NS_SWIFT_NAME(StorageMetadata)
 @property(strong, nonatomic, readonly, nullable) FIRStorageReference *storageReference;
 
 /**
+ * An array containing all download URLs available for the object.
+ */
+
+@property(strong, nonatomic, readonly, nullable) NSArray<NSURL *> *downloadURLs;
+
+/**
  * Creates an instance of FIRStorageMetadata from the contents of a dictionary.
  * @return An instance of FIRStorageMetadata that represents the contents of a dictionary.
+ *
  */
 - (nullable instancetype)initWithDictionary:(NSDictionary<NSString *, id> *)dictionary
     NS_DESIGNATED_INITIALIZER;
@@ -134,6 +141,9 @@ NS_SWIFT_NAME(StorageMetadata)
  * Determines if the current metadata represents a "folder".
  */
 @property(readonly, getter=isFolder) BOOL folder;
+
+
+- (nullable NSURL *) downloadURL;
 
 @end
 
