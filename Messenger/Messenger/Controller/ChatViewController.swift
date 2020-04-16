@@ -88,6 +88,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         profile = chatDetail[indexPath.row].profile
         chatID = chatDetail[indexPath.row].chatRef.key
+        
+        performSegue(withIdentifier: "Message", sender: nil)
     }
         
         override func prepare (for segue: UIStoryboardSegue, sender: Any?){
@@ -98,6 +100,15 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                 destinationViewcontroller.chatID = chatID
                 
             }
+    }
+    
+    @IBAction func signOut(_ sender: AnyObject) {
+        
+        try! Auth.auth().signOut()
+        
+        KeychainWrapper.standard.removeObject(forKey: "uid")
+        
+        dismiss(animated: true, completion: nil)
     }
             
 }
