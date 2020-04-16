@@ -37,9 +37,9 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        imagePicker.delegate = self
-        
         imagePicker = UIImagePickerController()
+        
+        imagePicker.delegate = self
         
         imagePicker.allowsEditing = true
         

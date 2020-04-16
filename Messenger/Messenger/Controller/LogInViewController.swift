@@ -23,6 +23,36 @@ class LogInViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        
+        if let _ = KeychainWrapper.standard.string(forKey: "uid"){
+            
+            performSegue(withIdentifier: "Messages", sender: nil)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "SignUp"{
+            
+            if let destination = segue.destination as? SignUpViewController{
+                
+                if self.userUid != nil{
+                    
+                    destination.userUid = userUid
+                }
+                
+                if self.emailTextField.text != nil{
+                    destination.emailTextField = emailTextField.text
+                }
+                
+                if self.passwordTextField.text != nil{
+                    
+                    destination.passwordTextField = passwordTextField.text
+                }
+            }
+        }
+    }
 
     @IBAction func SignIn (_ sender: AnyObject){
         
