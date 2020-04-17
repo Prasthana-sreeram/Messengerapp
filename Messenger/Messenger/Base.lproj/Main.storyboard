@@ -94,7 +94,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="+"/>
                                         <connections>
-                                            <segue destination="2A2-Bh-3e8" kind="show" id="Yhc-Dn-fwg"/>
+                                            <segue destination="2A2-Bh-3e8" kind="show" identifier="Search" id="Yhc-Dn-fwg"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cBq-TR-hbT">
@@ -104,6 +104,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <state key="normal" title="Log Out"/>
+                                        <connections>
+                                            <action selector="signOut:" destination="Con-y8-elw" eventType="touchUpInside" id="clW-qD-wwL"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -189,7 +192,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="lyF-43-Wim" kind="show" identifier="Chat-Messages" id="C7T-PE-K8Z"/>
+                        <outlet property="tableView" destination="kPI-By-HRb" id="JGW-pN-4xP"/>
+                        <segue destination="lyF-43-Wim" kind="show" identifier="Chat-Message" id="C7T-PE-K8Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1iK-Xf-0TO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -320,7 +324,7 @@
                                 <rect key="frame" x="0.0" y="67" width="375" height="530"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Message" rowHeight="60" id="6tH-yW-yfr" customClass="MessagesCell" customModule="Messenger" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatMessagesCell" rowHeight="60" id="6tH-yW-yfr" customClass="ChatMessageTableViewCell" customModule="Messenger" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6tH-yW-yfr" id="ObJ-vj-I9i">
@@ -355,6 +359,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="Iiy-1a-SnU" secondAttribute="trailing" constant="8" id="1ts-4Q-pgV"/>
                                                         <constraint firstItem="Iiy-1a-SnU" firstAttribute="leading" secondItem="AYU-01-itQ" secondAttribute="leading" constant="8" id="NwW-VD-vE0"/>
@@ -374,10 +379,10 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="recievedMessageLbl" destination="en6-Jt-s4o" id="kz5-rM-HPz"/>
-                                            <outlet property="recievedMessageView" destination="1YI-Va-QYc" id="igT-3U-85V"/>
-                                            <outlet property="sentMessageLbl" destination="Iiy-1a-SnU" id="T5i-OR-LMk"/>
-                                            <outlet property="sentMessageView" destination="AYU-01-itQ" id="AB4-ki-dqd"/>
+                                            <outlet property="recievedChatMessageLbl" destination="en6-Jt-s4o" id="JuD-JE-Rgs"/>
+                                            <outlet property="recievedChatMessageView" destination="1YI-Va-QYc" id="mV0-ng-zG8"/>
+                                            <outlet property="sentChatMessageLbl" destination="Iiy-1a-SnU" id="doB-tR-1Ms"/>
+                                            <outlet property="sentChatMessageView" destination="AYU-01-itQ" id="jcS-sF-GNi"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -401,6 +406,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <state key="normal" title="Back"/>
+                                        <connections>
+                                            <action selector="backPressed:" destination="lyF-43-Wim" eventType="touchUpInside" id="HKz-9m-xNE"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -429,6 +437,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                         <state key="normal" title="Send"/>
+                                        <connections>
+                                            <action selector="sendPressed:" destination="lyF-43-Wim" eventType="touchUpInside" id="BF4-2B-4CI"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -457,6 +468,11 @@
                             <constraint firstItem="fbL-6N-kfm" firstAttribute="top" secondItem="1As-2J-XxH" secondAttribute="top" id="zTh-1w-1Ug"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="messageTextField" destination="NB1-Yj-ooZ" id="Vo0-28-A0s"/>
+                        <outlet property="sendButton" destination="kpI-f9-NUl" id="RLN-6x-ZjO"/>
+                        <outlet property="tableView" destination="Qyb-1T-s8V" id="Dil-nO-lFo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J0F-yg-X23" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

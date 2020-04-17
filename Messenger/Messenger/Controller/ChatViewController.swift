@@ -89,7 +89,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         profile = chatDetail[indexPath.row].profile
         chatID = chatDetail[indexPath.row].chatRef.key
         
-        performSegue(withIdentifier: "Message", sender: nil)
+        performSegue(withIdentifier: "Chat-Message", sender: nil)
     }
         
         override func prepare (for segue: UIStoryboardSegue, sender: Any?){
@@ -97,7 +97,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                 
                 destinationViewcontroller.profile = profile
                 
-                destinationViewcontroller.chatID = chatID
+                destinationViewcontroller.chatMessageID  = chatID
                 
             }
     }
