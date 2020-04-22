@@ -186,9 +186,8 @@ NS_SWIFT_NAME(putData(_:metadata:));
  */
 // clang-format off
 - (FIRStorageDownloadTask *)dataWithMaxSize:(int64_t)size
-                                 completion:(void (^)(NSData *_Nullable data,
-                                                      NSError *_Nullable error))completion
-                     NS_SWIFT_NAME(getData(maxSize:completion:));
+completion:(void (^)(NSData *_Nullable data,
+                     NSError *_Nullable error))completion;
 // clang-format on
 
 /**

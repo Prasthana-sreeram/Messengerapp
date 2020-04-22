@@ -11,7 +11,6 @@
 		6261175B24443A700067443B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6261175A24443A700067443B /* SceneDelegate.swift */; };
 		6261176224443A710067443B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6261176124443A710067443B /* Assets.xcassets */; };
 		6261176524443A710067443B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6261176324443A710067443B /* LaunchScreen.storyboard */; };
-		6261177324446E940067443B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6261177224446E940067443B /* GoogleService-Info.plist */; };
 		6261177824457B390067443B /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6261177724457B390067443B /* LogInViewController.swift */; };
 		6261177A244580E60067443B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62611779244580E60067443B /* SignUpViewController.swift */; };
 		E099F78024482E1200EC5DD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E099F77E24482E1200EC5DD6 /* Main.storyboard */; };
@@ -21,6 +20,10 @@
 		E099F7882448653100EC5DD6 /* ChatMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E099F7872448653100EC5DD6 /* ChatMessageViewController.swift */; };
 		E099F78A2449811E00EC5DD6 /* ChatMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E099F7892449811E00EC5DD6 /* ChatMessageTableViewCell.swift */; };
 		E099F78C2449831500EC5DD6 /* Chat-Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E099F78B2449831500EC5DD6 /* Chat-Message.swift */; };
+		E099F790244ED97800EC5DD6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E099F78F244ED97800EC5DD6 /* GoogleService-Info.plist */; };
+		E099F7922450185400EC5DD6 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E099F7912450185400EC5DD6 /* SearchViewController.swift */; };
+		E099F7942450451200EC5DD6 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E099F7932450451200EC5DD6 /* SearchTableViewCell.swift */; };
+		E099F7962450495C00EC5DD6 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = E099F7952450495C00EC5DD6 /* Search.swift */; };
 		E0B11617244468260080EA82 /* Pods_Messenger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9E384317488FDD655300D5 /* Pods_Messenger.framework */; };
 		E0B11618244468260080EA82 /* Pods_Messenger.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9E384317488FDD655300D5 /* Pods_Messenger.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -47,7 +50,6 @@
 		6261176124443A710067443B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6261176424443A710067443B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6261176624443A710067443B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6261177224446E940067443B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6261177724457B390067443B /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		62611779244580E60067443B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		9CDA05379D122DE4FDEA07A5 /* Pods-Messenger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messenger.debug.xcconfig"; path = "Target Support Files/Pods-Messenger/Pods-Messenger.debug.xcconfig"; sourceTree = "<group>"; };
@@ -58,6 +60,10 @@
 		E099F7872448653100EC5DD6 /* ChatMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageViewController.swift; sourceTree = "<group>"; };
 		E099F7892449811E00EC5DD6 /* ChatMessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageTableViewCell.swift; sourceTree = "<group>"; };
 		E099F78B2449831500EC5DD6 /* Chat-Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chat-Message.swift"; sourceTree = "<group>"; };
+		E099F78F244ED97800EC5DD6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E099F7912450185400EC5DD6 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		E099F7932450451200EC5DD6 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		E099F7952450495C00EC5DD6 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		F8EC6CF1692C874C17AF7C9A /* Pods-Messenger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messenger.release.xcconfig"; path = "Target Support Files/Pods-Messenger/Pods-Messenger.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,7 +108,7 @@
 				E099F77E24482E1200EC5DD6 /* Main.storyboard */,
 				6261176124443A710067443B /* Assets.xcassets */,
 				6261176324443A710067443B /* LaunchScreen.storyboard */,
-				6261177224446E940067443B /* GoogleService-Info.plist */,
+				E099F78F244ED97800EC5DD6 /* GoogleService-Info.plist */,
 				6261176624443A710067443B /* Info.plist */,
 			);
 			path = Messenger;
@@ -113,6 +119,7 @@
 			children = (
 				E099F7852448339100EC5DD6 /* ChatDetail.swift */,
 				E099F78B2449831500EC5DD6 /* Chat-Message.swift */,
+				E099F7952450495C00EC5DD6 /* Search.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -122,6 +129,7 @@
 			children = (
 				E099F7832448322100EC5DD6 /* ChatTableViewCell.swift */,
 				E099F7892449811E00EC5DD6 /* ChatMessageTableViewCell.swift */,
+				E099F7932450451200EC5DD6 /* SearchTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -133,6 +141,7 @@
 				62611779244580E60067443B /* SignUpViewController.swift */,
 				E099F7812448305200EC5DD6 /* ChatViewController.swift */,
 				E099F7872448653100EC5DD6 /* ChatMessageViewController.swift */,
+				E099F7912450185400EC5DD6 /* SearchViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -216,7 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6261176524443A710067443B /* LaunchScreen.storyboard in Resources */,
-				6261177324446E940067443B /* GoogleService-Info.plist in Resources */,
+				E099F790244ED97800EC5DD6 /* GoogleService-Info.plist in Resources */,
 				6261176224443A710067443B /* Assets.xcassets in Resources */,
 				E099F78024482E1200EC5DD6 /* Main.storyboard in Resources */,
 			);
@@ -271,7 +280,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E099F7962450495C00EC5DD6 /* Search.swift in Sources */,
 				6261175924443A700067443B /* AppDelegate.swift in Sources */,
+				E099F7922450185400EC5DD6 /* SearchViewController.swift in Sources */,
 				6261175B24443A700067443B /* SceneDelegate.swift in Sources */,
 				E099F78A2449811E00EC5DD6 /* ChatMessageTableViewCell.swift in Sources */,
 				6261177A244580E60067443B /* SignUpViewController.swift in Sources */,
@@ -279,6 +290,7 @@
 				E099F78C2449831500EC5DD6 /* Chat-Message.swift in Sources */,
 				E099F7822448305200EC5DD6 /* ChatViewController.swift in Sources */,
 				E099F7862448339100EC5DD6 /* ChatDetail.swift in Sources */,
+				E099F7942450451200EC5DD6 /* SearchTableViewCell.swift in Sources */,
 				E099F7882448653100EC5DD6 /* ChatMessageViewController.swift in Sources */,
 				6261177824457B390067443B /* LogInViewController.swift in Sources */,
 			);

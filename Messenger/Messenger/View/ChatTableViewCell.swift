@@ -56,7 +56,7 @@ class ChatTableViewCell: UITableViewCell {
             
             let reference = Storage.storage().reference(forURL: userImage as! String)
             
-            reference.getData(maxSize: 1000000, completion: { (data, error) in
+            reference.data(withMaxSize: 1000000, completion: { (data, error) in
                 
                 if error != nil {
                     print("could not load image")

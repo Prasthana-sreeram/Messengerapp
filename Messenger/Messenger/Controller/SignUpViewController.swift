@@ -36,6 +36,7 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
         imagePicker = UIImagePickerController()
         
@@ -46,33 +47,46 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-        
+
         if let _ = KeychainWrapper.standard.string(forKey: "Uid"){
-            
+
             performSegue(withIdentifier: "Messages", sender: nil)
         }
-        
+
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String:Any]){
-            
-            
-            
+
+
+
         if let image =  info[UIImagePickerController.InfoKey.editedImage.rawValue] as? UIImage{
-                
+
                 userImagePicker.image = image
                 imageSeclected = true
-            
+
             }else{
-                
+
                 print("image was not selected")
             }
-            
+
             imagePicker.dismiss(animated: true, completion: nil)
-            
+
         }
-        
+
     }
-    
-    
+//    func setupmainImageview(){
+//           userImagePicker.layer.cornerRadius = 40
+//           userImagePicker.clipsToBounds = true
+//           userImagePicker.isUserInteractionEnabled = true
+//           let tapGesture = UITapGestureRecognizer(target: self, action: #selector(presentPicker))
+//           userImagePicker.addGestureRecognizer(tapGesture)
+//       }
+//       @objc func presentPicker() {
+//           let picker = UIImagePickerController()
+//           picker.sourceType = .photoLibrary
+//           picker.allowsEditing = true
+//           picker.delegate = self as UIImagePickerControllerDelegate & UINavigationControllerDelegate
+//           self.present(picker,animated: true,completion: nil)
+//       }
+
     
     func setUser(image: String) -> Void{
         

@@ -200,10 +200,10 @@
             </objects>
             <point key="canvasLocation" x="892" y="133.5832083958021"/>
         </scene>
-        <!--SearchVC-->
+        <!--Search View Controller-->
         <scene sceneID="kW5-kD-ppw">
             <objects>
-                <viewController id="2A2-Bh-3e8" customClass="SearchVC" customModule="Messenger" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchViewController" id="2A2-Bh-3e8" customClass="SearchViewController" customModule="Messenger" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="e8G-o1-O6s"/>
                         <viewControllerLayoutGuide type="bottom" id="6gp-AS-oCr"/>
@@ -231,6 +231,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <state key="normal" title="Back"/>
+                                        <connections>
+                                            <action selector="goBack:" destination="2A2-Bh-3e8" eventType="touchUpInside" id="hjp-uU-LGc"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -253,7 +256,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="UserCell" rowHeight="56" id="jkm-4R-f86" customClass="searchCell" customModule="Messenger" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SearchCell" rowHeight="56" id="jkm-4R-f86" customClass="searchCell" customModule="Messenger" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jkm-4R-f86" id="5fQ-0x-Nln">
@@ -282,10 +285,6 @@
                                                 <constraint firstItem="mhU-h9-kwn" firstAttribute="centerY" secondItem="5fQ-0x-Nln" secondAttribute="centerY" id="xgd-y5-l4y"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="nameLbl" destination="mhU-h9-kwn" id="RzF-C1-RJq"/>
-                                            <outlet property="userImage" destination="bmW-aZ-iDr" id="Aji-Gh-2mk"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -301,12 +300,14 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="searchBar" destination="l7B-5g-qB6" id="qiI-0Z-HJD"/>
+                        <outlet property="tableView" destination="cMt-Cf-yQp" id="1BJ-HF-jhm"/>
                         <segue destination="lyF-43-Wim" kind="show" identifier="Chat-Message" id="Piu-Rw-Hqy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9vu-fL-UJk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1646" y="-639"/>
+            <point key="canvasLocation" x="1897" y="-925"/>
         </scene>
         <!--Chat Message View Controller-->
         <scene sceneID="g52-MT-eLb">
@@ -476,7 +477,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J0F-yg-X23" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1645.5999999999999" y="133.5832083958021"/>
+            <point key="canvasLocation" x="1897" y="139"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="JWX-wD-k7F">
@@ -513,6 +514,13 @@
                                     <action selector="createAccount:" destination="Wrx-Za-Z9Y" eventType="touchUpInside" id="HJh-g1-3vB"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mp0-V5-W84">
+                                <rect key="frame" x="104" y="102" width="128" height="128"/>
+                                <state key="normal" title="+ Photo"/>
+                                <connections>
+                                    <action selector="selectedImgPicker:" destination="Wrx-Za-Z9Y" eventType="touchUpInside" id="LJm-gV-NDS"/>
+                                </connections>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="To5-qZ-VVu">
                                 <rect key="frame" x="104" y="102" width="128" height="128"/>
                                 <constraints>
@@ -520,13 +528,6 @@
                                     <constraint firstAttribute="width" constant="128" id="FuZ-7b-vZQ"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mp0-V5-W84">
-                                <rect key="frame" x="104" y="102" width="128" height="128"/>
-                                <state key="normal" title="+ Photo"/>
-                                <connections>
-                                    <action selector="selectedImgPicker:" destination="Wrx-Za-Z9Y" eventType="touchUpInside" id="llB-c0-T0Z"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -559,7 +560,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="C7T-PE-K8Z"/>
-        <segue reference="g5h-Te-lyd"/>
+        <segue reference="Piu-Rw-Hqy"/>
+        <segue reference="B38-bo-E2g"/>
     </inferredMetricsTieBreakers>
 </document>
