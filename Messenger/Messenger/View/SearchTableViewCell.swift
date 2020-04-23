@@ -14,6 +14,7 @@ import SwiftKeychainWrapper
 
 class SearchTableViewCell: UITableViewCell {
     
+    
     @IBOutlet weak var searchImage: UIImageView!
     
     @IBOutlet weak var searchNameLabel: UILabel!
