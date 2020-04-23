@@ -29,6 +29,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        hideKeyboardWhenTappedAround()
 
         tableView.delegate = self
         

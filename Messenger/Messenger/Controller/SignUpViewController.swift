@@ -36,6 +36,8 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
 
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+        hideKeyboardWhenTappedAround()
         
 
         imagePicker = UIImagePickerController()

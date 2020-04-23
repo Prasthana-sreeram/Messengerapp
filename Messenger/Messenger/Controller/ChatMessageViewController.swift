@@ -32,6 +32,8 @@ class ChatMessageViewController: UIViewController, UITableViewDelegate, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        hideKeyboardWhenTappedAround()
 
         tableView.delegate = self
         
@@ -85,7 +87,7 @@ class ChatMessageViewController: UIViewController, UITableViewDelegate, UITableV
                }
            }
     
-    @objc func dismissKeyboard() {
+    @objc override func dismissKeyboard() {
         
         view.endEditing(true)
     }

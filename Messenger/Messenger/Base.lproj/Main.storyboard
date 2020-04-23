@@ -127,7 +127,7 @@
                                 <rect key="frame" x="0.0" y="67" width="375" height="580"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessageCell" rowHeight="80" id="nob-cF-YH9" customClass="MessageCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessageCell" rowHeight="80" id="nob-cF-YH9" customClass="ChatTableViewCell" customModule="Messenger" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nob-cF-YH9" id="Sjy-xs-Xr9">
@@ -172,9 +172,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="chatPreview" destination="fHx-9Y-tS4" id="QY6-r7-438"/>
-                                            <outlet property="recipientImg" destination="JpM-U1-yhC" id="xIz-QF-NVh"/>
-                                            <outlet property="recipientName" destination="NKy-wG-xBn" id="hmL-vi-0J5"/>
+                                            <outlet property="profileChat" destination="fHx-9Y-tS4" id="Jkf-0z-1qD"/>
+                                            <outlet property="profileImage" destination="JpM-U1-yhC" id="GWU-W6-9HE"/>
+                                            <outlet property="profileName" destination="NKy-wG-xBn" id="97C-Gr-bNA"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -565,6 +565,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Piu-Rw-Hqy"/>
-        <segue reference="B38-bo-E2g"/>
+        <segue reference="g5h-Te-lyd"/>
     </inferredMetricsTieBreakers>
 </document>

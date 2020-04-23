@@ -34,6 +34,8 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        hideKeyboardWhenTappedAround()
+        
         tableView.delegate = self
                
         tableView.dataSource = self
